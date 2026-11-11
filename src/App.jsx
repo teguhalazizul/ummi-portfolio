@@ -7,7 +7,7 @@ const T = {
     hi: 'Halo, saya', roles: ['Shipping Officer', 'Freight Forwarding', 'Export Documentation', 'Warehouse Operations'],
     sum: 'Profesional logistik dan pengiriman yang teliti, berpengalaman dalam booking pengiriman, dokumen ekspor, freight forwarding, kurir, tracking, dan operasional gudang. Saat ini mengelola pengiriman dari booking, dokumentasi, dispatch, hingga follow-up pengantaran.',
     cv: 'Unduh CV', contact: 'Hubungi Saya',
-    stats: [['3.80', 'IPK / 4.00'], ['3', 'Kurir: DHL, FedEx, UPS'], ['4', 'Sistem: SAP, CEISA, INSW, Excel']],
+    stats: [['3.80', 'IPK / 4.00'], ['4', 'Sistem: SAP, CEISA, INSW, Excel']],
     aboutT: 'Tentang Saya', about: 'Lulusan Sarjana Terapan Logistik Perdagangan Internasional dari Politeknik Negeri Batam. Terbiasa berkoordinasi dengan pelanggan, vendor, tim internal, kurir, dan freight forwarder agar setiap kiriman tiba tepat waktu dan sesuai persyaratan.',
     expT: 'Pengalaman Profesional', now: 'Sekarang',
     exp: [
@@ -31,7 +31,7 @@ const T = {
     edT: 'Pendidikan', ed: ['Politeknik Negeri Batam', 'Sarjana Terapan Logistik Perdagangan Internasional', 'Agu 2021 - Nov 2025', 'IPK 3.80/4.00'],
     cw: 'Mata kuliah: Logistics & Supply Chain Management, Warehouse & Inventory Management, Integrated Logistics System (ERP), Freight Forwarding, Custom Clearance, Distribution & Transportation, Quality & Risk Management, Data Analysis, Contemporary Logistics.',
     ceT: 'Sertifikasi & Prestasi', ce: ['Sertifikasi SAP for Logistic', 'Sertifikasi Warehouse Supervisor (BNSP)', 'Sertifikat program UMKM Merdeka APINDO, Kepulauan Riau', 'Sertifikat Manajemen UMKM Kota Batam & Package Management, Tower A Polibatam', 'Finalis nasional Program Kreativitas Mahasiswa (PKM)', 'Juara 2 Business Model Competition tingkat kampus'],
-    ctT: 'Siap mengirim kerja sama berikutnya?', ctS: 'Hubungi saya untuk peluang di bidang logistik dan pengiriman.', trkT: 'Perjalanan Kiriman', trk: ['Booking', 'Dokumen & Pickup', 'Dalam Perjalanan', 'Terkirim'],
+    ctT: 'Siap mengirim kerja sama berikutnya?', ctS: 'Hubungi saya untuk peluang di bidang logistik dan pengiriman.', crsT: 'Mata Kuliah Relevan', trkT: 'Perjalanan Kiriman', trk: ['Booking', 'Dokumen & Pickup', 'Dalam Perjalanan', 'Terkirim'],
     hl: [['File', 'Teliti', 'Dokumen ekspor akurat dan sesuai syarat pelanggan.'], ['Truck', 'Proaktif', 'Follow-up kurir dan forwarder sebelum masalah muncul.'], ['Globe', 'Hemat biaya', 'Membandingkan tarif dan memeriksa tagihan.']],
     say: ['Halo! Aku Boxy 📦', 'Klik aku lagi!', 'Paketmu aman bersama Ummi!', 'Siap kirim ke seluruh dunia 🌍'], top: 'Ke atas',
     foot: 'Dibuat dengan React'
@@ -41,7 +41,7 @@ const T = {
     hi: "Hi, I'm", roles: ['Shipping Officer', 'Freight Forwarding', 'Export Documentation', 'Warehouse Operations'],
     sum: 'Detail-oriented logistics and shipping professional with hands-on experience in shipment booking, export documentation, freight forwarding, courier shipments, tracking, and warehouse operations. Currently managing shipments from booking and documentation through dispatch and delivery follow-up.',
     cv: 'Download CV', contact: 'Contact Me',
-    stats: [['3.80', 'GPA / 4.00'], ['3', 'Couriers: DHL, FedEx, UPS'], ['4', 'Systems: SAP, CEISA, INSW, Excel']],
+    stats: [['3.80', 'GPA / 4.00'], ['4', 'Systems: SAP, CEISA, INSW, Excel']],
     aboutT: 'About Me', about: 'Applied Bachelor of International Trade Logistics graduate from Batam State Polytechnic. Used to coordinating with customers, vendors, internal teams, couriers, and freight forwarders so every shipment arrives on time and to requirements.',
     expT: 'Professional Experience', now: 'Present',
     exp: [
@@ -65,7 +65,7 @@ const T = {
     edT: 'Education', ed: ['Batam State Polytechnic', 'Applied Bachelor of International Trade Logistics', 'Aug 2021 - Nov 2025', 'GPA 3.80/4.00'],
     cw: 'Coursework: Logistics & Supply Chain Management, Warehouse & Inventory Management, Integrated Logistics System (ERP), Freight Forwarding, Custom Clearance, Distribution & Transportation, Quality & Risk Management, Data Analysis, Contemporary Logistics.',
     ceT: 'Certifications & Achievements', ce: ['SAP for Logistic certification', 'Warehouse Supervisor certification (BNSP)', 'APINDO UMKM Merdeka program certificate, Riau Islands', 'UMKM Management (Batam City) & Package Management, Tower A Polibatam', 'National finalist, Student Creativity Program (PKM)', '2nd Place, campus-level Business Model Competition'],
-    ctT: 'Ready to ship your next project?', ctS: 'Get in touch for logistics and shipping opportunities.', trkT: 'Shipment Journey', trk: ['Booked', 'Docs & Pickup', 'In Transit', 'Delivered'],
+    ctT: 'Ready to ship your next project?', ctS: 'Get in touch for logistics and shipping opportunities.', crsT: 'Relevant Coursework', trkT: 'Shipment Journey', trk: ['Booked', 'Docs & Pickup', 'In Transit', 'Delivered'],
     hl: [['File', 'Detail-oriented', 'Accurate export documents that match customer requirements.'], ['Truck', 'Proactive', 'Follows up with couriers and forwarders before issues grow.'], ['Globe', 'Cost-aware', 'Compares rates and checks billing against agreed prices.']],
     say: ["Hi! I'm Boxy 📦", 'Click me again!', 'Your parcel is safe with Ummi!', 'Ready to ship worldwide 🌍'], top: 'Top',
     foot: 'Built with React'
@@ -128,6 +128,7 @@ function Scene() {
 }
 
 
+const CRS = ['Logistics & Supply Chain Management', 'Warehouse & Inventory Management', 'Integrated Logistics System (ERP)', 'Freight Forwarding', 'Custom Clearance', 'Distribution & Transportation', 'Quality & Risk Management']
 const WORDS = ['DHL', 'FedEx', 'UPS', 'SAP', 'CEISA PPFTZ', 'INSW', 'Sea Freight', 'Export Docs', 'Warehouse', 'Tracking']
 const Marquee = () => (
   <div className="marq" aria-hidden="true"><div className="marq-in">
@@ -239,6 +240,8 @@ export default function App() {
                 <a className="btn sec2" href="#contact"><Ic.Mail size={18} />{t.contact}</a>
               </div>
               <div className="stats">{t.stats.map(([v, l]) => <Stat key={lang + l} v={v} l={l} />)}</div>
+              <div className="crs"><h4><Ic.Cap size={18} />{t.crsT}</h4>
+                <div>{CRS.map((c, k) => <span key={c} style={{ animationDelay: 700 + k * 80 + 'ms' }}>{c}</span>)}</div></div>
             </div>
             <div className="photo-wrap">
               <div className="ring r1" /><div className="ring r2" />

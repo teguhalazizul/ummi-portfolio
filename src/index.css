@@ -213,3 +213,11 @@ h1{font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800;letter-spacing:-.02em;anim
 .foot{position:relative;overflow:hidden;padding-top:40px}
 .ftruck{position:absolute;top:8px;left:0;color:var(--p-d);animation:drive 10s linear infinite}
 @media(max-width:860px){.boxy{bottom:auto;top:92px;right:2vw}.boxy svg{width:64px;height:64px}.tg3,.tg4{display:none}.st small{font-size:.7rem}.st-i{width:46px;height:46px}.bar{top:22px}}
+
+.crs{margin-top:14px;background:#fff;border-radius:18px;padding:16px 18px;border-left:4px solid var(--a);box-shadow:0 6px 20px rgba(27,58,92,.07);animation:up .8s .6s both;max-width:560px}
+.crs h4{display:flex;align-items:center;gap:8px;font:800 1rem 'Fraunces',serif;color:var(--s);margin-bottom:10px}
+.crs h4 svg{color:var(--p-d)}
+.crs div{display:flex;flex-wrap:wrap;gap:7px}
+.crs span{background:var(--p-l);color:var(--s);font-weight:600;font-size:.76rem;padding:5px 11px;border-radius:99px;border:1px solid rgba(97,157,198,.35);animation:pop .5s both;transition:.25s}
+.crs span:hover{background:var(--p);color:#fff;transform:translateY(-2px) rotate(-2deg)}
+@media(max-width:860px){.crs{text-align:left;margin-inline:auto}}
